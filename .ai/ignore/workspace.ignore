@@ -1,0 +1,17 @@
+# git
+.git
+
+# idea
+.idea
+
+# agent config
+.ai
+
+# build
+target
+
+# node
+node_modules
+
+# logs
+logs
