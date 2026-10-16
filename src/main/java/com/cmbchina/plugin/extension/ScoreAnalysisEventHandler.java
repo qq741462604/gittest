@@ -1,4 +1,4 @@
-package com.study.plugin.extension;
+package com.cmbchina.plugin.extension;
 
 import com.cmbchina.plugin.service.StrategyService;
 import com.cmbchina.plugin.utils.SpringContextBeanUtil;
@@ -51,7 +51,12 @@ public class ScoreAnalysisEventHandler extends RcesEventHandler {
         // Map<String, Object> procVars = eventData.getProcVars();
         // //外部变量
         // Map<String, Object> externalVars = eventData.getExternalVars();
-
+        // //窗口变量
+        // Map<String, Object> winVars = eventData.getWindowVars();
+        // //全局过滤规则结果
+        // Map<String, Object> globalFilterRules = eventData.getGlobalFilterRules();
+        // //维度过滤规则结果
+        // Map<String, Object> dimensionFilterRules = eventData.getDimensionFilterRules();
         //获取rtd决策计算结果
         Map<String, Object> rtdResults = eventData.getRtdResults();
         //流水号

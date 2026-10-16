@@ -1,4 +1,4 @@
-package com.study.plugin.extension;
+package com.cmbchina.plugin.extension;
 
 import com.cmbchina.rces.executor.common.ContextKeyConstant;
 import com.cmbchina.rces.executor.common.EventData;
@@ -10,7 +10,12 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.Map;
 
-
+/**
+ * 自定义的handler在框架的pipeline体系里面，所以不需要配合注解使用
+ *
+ * @author 西安真的好热
+ * @date 2025/8/12 10:36
+ */
 @Slf4j
 public class DataPrepEventHandler extends RcesEventHandler {
 
@@ -41,6 +46,14 @@ public class DataPrepEventHandler extends RcesEventHandler {
             EventData eventData = (EventData)context.getUserData().get(ContextKeyConstant.EVENT_DATA);
             Map<String, Object> eventFields = eventData.getData();
 
+            //初始化ip、lbs翻译相关字段
+            // eventFields.put(LBS_CITY, "");
+            // eventFields.put(LBS_COUNTRY, "");
+            // eventFields.put(IP_CITY, "");
+            // eventFields.put(IP_COUNTRY, "");
+            // eventFields.put("test", "abcd");
+
+
 
             log.debug("DataPrepEventHandler eventFields: {}", eventFields);
         } catch (Exception ex) {
@@ -52,7 +65,5 @@ public class DataPrepEventHandler extends RcesEventHandler {
             log.debug("DataPrepEventHandler end.");
         }
     }
-
-
 
 }

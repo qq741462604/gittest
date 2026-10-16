@@ -1,4 +1,4 @@
-package com.study.plugin;
+package com.cmbchina.plugin;
 
 
 import org.springframework.boot.SpringApplication;
