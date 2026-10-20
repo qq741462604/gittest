@@ -42,3 +42,5 @@ application-local.yml
 
 *.json
 /src/main/java/com/minicodex/template/
+/local-maven-repository/
+/.ai/
